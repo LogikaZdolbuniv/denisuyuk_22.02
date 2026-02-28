@@ -91,6 +91,8 @@ header .container {
 .sushi-title { color: #ffb703; }
 .pizza-title { color: #e63946; }
 .drinks-title { color: #4cc9f0; }
+.snacks-title { color: #ffd166; }
+.maps-title { color: #90e0ef; }
 
 .menu-grid {
     display: grid;
@@ -100,13 +102,7 @@ header .container {
 }
 
 .menu-item {
-    background: #161616;<div class="menu-item snacks">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK7Q1mZfNlaT0zrRsGquWvuAWZb4NBz-bU5A&s">
-<div class="info"><h3>cashew nuts</h3><p>cashew nuts with salt</p></p><div class="price">$5</div></div>
-</div><div class="menu-item snacks">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK7Q1mZfNlaT0zrRsGquWvuAWZb4NBz-bU5A&s">
-<div class="info"><h3>cashew nuts</h3><p>cashew nuts with salt</p></p><div class="price">$5</div></div>
-</div>
+    background: #161616;
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid #222;
@@ -118,9 +114,10 @@ header .container {
     display: block;
 }
 
-.menu-item img {
+.menu-item img,
+.menu-item iframe {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -167,7 +164,7 @@ header .container {
     <button class="tab-btn" onclick="showCategory('pizza', this)">Pizza</button>
     <button class="tab-btn" onclick="showCategory('drinks', this)">Drinks</button>
     <button class="tab-btn" onclick="showCategory('snacks', this)">Snacks</button>
-    <button class="tab-btn" onclick="showCategory('Maps', this)">Maps</button>
+    <button class="tab-btn" onclick="showCategory('maps', this)">Maps</button>
 </div>
 
 <div class="menu-grid">
@@ -176,8 +173,7 @@ header .container {
 <h2 class="menu-title pizza-title">🍕 Pizza Menu</h2>
 <h2 class="menu-title drinks-title">🥤 Drinks Menu</h2>
 <h2 class="menu-title snacks-title">🥜 Snacks Menu</h2>
-<h2 class="menu-title maps-title"> Де ми є?</h2>
-
+<h2 class="menu-title maps-title">📍 Де ми є?</h2>
 
 <!-- SUSHI -->
 <div class="menu-item sushi">
@@ -190,25 +186,10 @@ header .container {
 <div class="info"><h3>Golden Dragon</h3><p>Unagi, avocado, teriyaki</p><div class="price">$16</div></div>
 </div>
 
-<div class="menu-item sushi">
-<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600">
-<div class="info"><h3>Samurai Roll</h3><p>Tuna, cucumber, spicy mayo</p><div class="price">$13</div></div>
-</div>
-
-<div class="menu-item sushi">
-<img src="https://images.unsplash.com/photo-1607301405390-d831c242f59b?w=600">
-<div class="info"><h3>Fire Ebi</h3><p>Shrimp tempura, chili sauce</p><div class="price">$15</div></div>
-</div>
-
 <!-- PIZZA -->
 <div class="menu-item pizza">
 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600">
 <div class="info"><h3>Samurai BBQ</h3><p>Chicken, bacon, BBQ</p><div class="price">$18</div></div>
-</div>
-
-<div class="menu-item pizza">
-<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600">
-<div class="info"><h3>Pepperoni Heat</h3><p>Pepperoni, chili oil</p><div class="price">$17</div></div>
 </div>
 
 <!-- DRINKS -->
@@ -217,35 +198,21 @@ header .container {
 <div class="info"><h3>Matcha Ice Tea</h3><p>Green tea, mint</p><div class="price">$4</div></div>
 </div>
 
-<div class="menu-item drinks">
-<img src="https://images.unsplash.com/photo-1510627498534-cf7e9002facc?w=600">
-<div class="info"><h3>Yuzu Lemonade</h3><p>Citrus Japanese drink</p><div class="price">$5</div></div>
-</div>
-
-<div class="menu-item drinks">
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600">
-<div class="info"><h3>Cold Brew Coffee</h3><p>Strong & fresh</p><div class="price">$4</div></div>
-</div>
-
-<div class="menu-item snacks">
-<img src="https://roll-club.dp.ua/wp-content/uploads/2024/02/nori-sheets-for-sushi.jpg">
-<div class="info"><h3>dried nori</h3><p>dried nori with borscht flavor </p></p><div class="price">$5</div></div>
-</div>
-
-<div class="menu-item snacks">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK7Q1mZfNlaT0zrRsGquWvuAWZb4NBz-bU5A&s">
-<div class="info"><h3>cashew nuts</h3><p>cashew nuts with salt</p></p><div class="price">$6</div></div>
-</div>
-
+<!-- SNACKS -->
 <div class="menu-item snacks">
 <img src="https://wearenotmartha.com/wp-content/uploads/sweet-and-salty-popcorn-featured.jpg">
-<div class="info"><h3>popcorn</h3><p>popcorn with salt, caramel, cherry, cheese</p></p><div class="price">$4</div></div>
+<div class="info"><h3>Popcorn</h3><p>Salt, caramel, cherry, cheese</p><div class="price">$4</div></div>
 </div>
 
+<!-- MAP -->
 <div class="menu-item maps">
-<img src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.6419056117556!2d26.250959099999996!3d50.52222939999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f0d4f0a177de7%3A0x17f52fbd651f9ec3!2sLogika!5e0!3m2!1suk!2sua!4v1771773688594!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></div>
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.6419056117556!2d26.250959099999996!3d50.52222939999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f0d4f0a177de7%3A0x17f52fbd651f9ec3!2sLogika!5e0!3m2!1suk!2sua!4v1771773688594!5m2!1suk!2sua"
+allowfullscreen=""
+loading="lazy">
+</iframe>
 </div>
-</div>
+
 </div>
 </div>
 
